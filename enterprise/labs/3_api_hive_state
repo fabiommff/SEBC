@@ -1,0 +1,240 @@
+Hive State
+
+[root@ip-172-31-48-155 ~]# curl -X GET -u "admin:admin" -i http://ip-172-31-48-155.ec2.internal:7180/api/v2/clusters/Cluster%201/services/hive/roles
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Set-Cookie: CLOUDERA_MANAGER_SESSIONID=twysl513mumcq9dl3fwzkeqi;Path=/;HttpOnly
+Content-Type: application/json
+Date: Wed, 05 Apr 2017 17:51:07 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26.cloudera.4)
+
+{
+  "items" : [ {
+    "name" : "hive-GATEWAY-3b4932db7973d6cdb3e43b21d0bfe724",
+    "type" : "GATEWAY",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "59de1104-b726-45a7-acd3-1c20a8412846"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-GATEWAY-3b4932db7973d6cdb3e43b21d0bfe724",
+    "roleState" : "NA",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-HIVEMETASTORE-8d94b42203226deeb1c6e0d320772aaa",
+    "type" : "HIVEMETASTORE",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "34a2825e-7036-44b5-91ed-8f4f434a6392"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-HIVEMETASTORE-8d94b42203226deeb1c6e0d320772aaa",
+    "roleState" : "STARTED",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ {
+      "name" : "HIVEMETASTORE_CANARY_HEALTH",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_FILE_DESCRIPTOR",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_HEAP_DUMP_DIRECTORY_FREE_SPACE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_HOST_HEALTH",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_LOG_DIRECTORY_FREE_SPACE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_PAUSE_DURATION",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_SCM_HEALTH",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_SWAP_MEMORY_USAGE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVEMETASTORE_UNEXPECTED_EXITS",
+      "summary" : "GOOD"
+    } ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-GATEWAY-8d94b42203226deeb1c6e0d320772aaa",
+    "type" : "GATEWAY",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "34a2825e-7036-44b5-91ed-8f4f434a6392"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-GATEWAY-8d94b42203226deeb1c6e0d320772aaa",
+    "roleState" : "NA",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-HIVESERVER2-8d94b42203226deeb1c6e0d320772aaa",
+    "type" : "HIVESERVER2",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "34a2825e-7036-44b5-91ed-8f4f434a6392"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-HIVESERVER2-8d94b42203226deeb1c6e0d320772aaa",
+    "roleState" : "STARTED",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ {
+      "name" : "HIVESERVER2_DOWNLOADED_RESOURCES_DIRECTORY_FREE_SPACE",
+      "summary" : "DISABLED"
+    }, {
+      "name" : "HIVESERVER2_EXEC_LOCAL_SCRATCH_DIRECTORY_FREE_SPACE",
+      "summary" : "DISABLED"
+    }, {
+      "name" : "HIVESERVER2_FILE_DESCRIPTOR",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_HEAP_DUMP_DIRECTORY_FREE_SPACE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_HOST_HEALTH",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_LOG_DIRECTORY_FREE_SPACE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_PAUSE_DURATION",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_SCM_HEALTH",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_SWAP_MEMORY_USAGE",
+      "summary" : "GOOD"
+    }, {
+      "name" : "HIVESERVER2_UNEXPECTED_EXITS",
+      "summary" : "GOOD"
+    } ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-GATEWAY-0f3502f34799b72a75dfff38baf23b89",
+    "type" : "GATEWAY",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "ed2b2f57-eab1-4a4e-8180-86c93ebd3bd6"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-GATEWAY-0f3502f34799b72a75dfff38baf23b89",
+    "roleState" : "NA",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-GATEWAY-dbc0292c4527a10c33f174fcca6542b5",
+    "type" : "GATEWAY",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "03cc71da-459b-483a-b206-73dcd180ba2c"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-GATEWAY-dbc0292c4527a10c33f174fcca6542b5",
+    "roleState" : "NA",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  }, {
+    "name" : "hive-GATEWAY-a014dd5c1092540f874fd64267c5859e",
+    "type" : "GATEWAY",
+    "serviceRef" : {
+      "clusterName" : "cluster",
+      "serviceName" : "hive"
+    },
+    "hostRef" : {
+      "hostId" : "12495ba7-5d70-4a92-b5d0-20584eb1ff23"
+    },
+    "roleUrl" : "http://ip-172-31-48-155.ec2.internal:7180/cmf/roleRedirect/hive-GATEWAY-a014dd5c1092540f874fd64267c5859e",
+    "roleState" : "NA",
+    "healthSummary" : "GOOD",
+    "healthChecks" : [ ],
+    "configStale" : false,
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED"
+  } ]
+}
+
+Hive Stop
+
+[root@ip-172-31-48-155 ~]# curl -X POST -u "admin:admin" -i http://ip-172-31-48-155.ec2.internal:7180/api/v2/clusters/Cluster%201/services/hive/commands/stop
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Set-Cookie: CLOUDERA_MANAGER_SESSIONID=13p3bxx2dqhuzfkjrvhevu3r5;Path=/;HttpOnly
+Content-Type: application/json
+Date: Wed, 05 Apr 2017 17:55:33 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26.cloudera.4)
+
+{
+  "id" : 287,
+  "name" : "Stop",
+  "startTime" : "2017-04-05T17:55:33.843Z",
+  "active" : true,
+  "serviceRef" : {
+    "clusterName" : "cluster",
+    "serviceName" : "hive"
+  }
+
+Hive Start
+
+[root@ip-172-31-48-155 ~]# curl -X POST -u "admin:admin" -i http://ip-172-31-48-155.ec2.internal:7180/api/v2/clusters/Cluster%201/services/hive/commands/start
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Set-Cookie: CLOUDERA_MANAGER_SESSIONID=1hoyt9l4at4dvla7w0ez9o88;Path=/;HttpOnly
+Content-Type: application/json
+Date: Wed, 05 Apr 2017 17:58:27 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26.cloudera.4)
+
+{
+  "id" : 291,
+  "name" : "Start",
+  "startTime" : "2017-04-05T17:58:27.718Z",
+  "active" : true,
+  "serviceRef" : {
+    "clusterName" : "cluster",
+    "serviceName" : "hive"
+  }
+
