@@ -1,0 +1,44 @@
+#####################
+
+HDFS Block Size: 32M
+Containers: 4
+Memory/Container: 8192 / 9830
+Data Size: 107374182
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=4  -D fs.block.size=32M -D mapreduce.map.memory.mb=8192   -D mapreduce.map.java.opts=-Xmx9830m 100000000 /user/fabiommff/terainput/
+real    1m17.316s
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar terasort  -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=4  -D fs.block.size=32M -D mapreduce.map.memory.mb=8192   -D mapreduce.map.java.opts=-Xmx9830m /user/fabiommff/terainput/ /user/fabiommff/teraoutput2
+real    7m5.078s
+
+
+HDFS Block Size: 32M
+Containers: 4
+Memory/Container: 4096 / 4915
+Data Size: 107374182
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=4  -D fs.block.size=32M -D mapreduce.map.memory.mb=4096   -D mapreduce.map.java.opts=-Xmx4915m 100000000 /user/fabiommff/terainput/
+real    1m6.026s
+
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar terasort  -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=4  -D fs.block.size=32M -D mapreduce.map.memory.mb=4096   -D mapreduce.map.java.opts=-Xmx4915m /user/fabiommff/terainput2/ /user/fabiommff/teraoutput3
+real    3m22.567s
+
+
+HDFS Block Size: 32M
+Containers: 2
+Memory/Container: 4096 / 4915
+Data Size: 107374182
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=2  -D fs.block.size=32M -D mapreduce.map.memory.mb=4096   -D mapreduce.map.java.opts=-Xmx4915m 100000000 /user/fabiommff/terainput2/
+real    1m35.767s
+
+
+
+time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar terasort  -D dfs.replication=1 -D mapred.map.tasks=4 -D mapreduce.job.maps=2  -D fs.block.size=32M -D mapreduce.map.memory.mb=4096   -D mapreduce.map.java.opts=-Xmx4915m /user/fabiommff/terainput2/ /user/fabiommff/teraoutput5
+real    3m12.397s
