@@ -29,3 +29,31 @@ rhui-REGION-client-config-server-7/x86_64        Red Hat Update Infrastru      6
 rhui-REGION-rhel-server-releases/7Server/x86_64  Red Hat Enterprise Linux 14,268
 rhui-REGION-rhel-server-rh-common/7Server/x86_64 Red Hat Enterprise Linux    225
 repolist: 14,499
+
+
+
+Reproduced for all nodes:
+
+[root@ip-172-31-50-139 /]# useradd -u 2010 neymar
+useradd -u 2016 ronaldo
+groupadd barca
+groupadd merengues
+usermod -a -G barca ronaldo
+usermod -a -G merengues neymar
+cat /etc/passwd | grep neymar
+cat /etc/passwd | grep ronaldo
+[root@ip-172-31-50-139 /]# useradd -u 2016 ronaldo
+[root@ip-172-31-50-139 /]# groupadd barca
+[root@ip-172-31-50-139 /]# groupadd merengues
+cat /etc/group | grep barca
+[root@ip-172-31-50-139 /]# usermod -a -G barca ronaldo
+[root@ip-172-31-50-139 /]# usermod -a -G merengues neymar
+[root@ip-172-31-50-139 /]# cat /etc/passwd | grep neymar
+neymar:x:2010:2010::/home/neymar:/bin/bash
+[root@ip-172-31-50-139 /]# cat /etc/passwd | grep ronaldo
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+[root@ip-172-31-50-139 /]# cat /etc/group | grep barca
+barca:x:2017:ronaldo
+[root@ip-172-31-50-139 /]# cat /etc/group | grep merengues
+merengues:x:2018:neymar
+
